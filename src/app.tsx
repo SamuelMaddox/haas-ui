@@ -3,7 +3,7 @@ import './app.css';
 
 function App(): ReactElement {
   return (
-    <></>
+    <h1>Hello World!</h1>
   );
 }
 
