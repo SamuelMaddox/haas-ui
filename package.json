@@ -13,6 +13,8 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.0",
     "prettier": "2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -30,7 +32,14 @@
     "lint:fix": "eslint --fix --ext js,jsx,ts,tsx src",
     "lint:check": "eslint --max-warnings 0 --ext js,jsx,ts,tsx src",
     "prettier": "prettier --write src",
-    "prettier:check": "prettier --check src"
+    "prettier:check": "prettier --check src",
+    "postinstall": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "yarn lint:check",
+      "yarn prettier"
+    ]
   },
   "browserslist": {
     "production": [
