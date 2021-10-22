@@ -23,6 +23,8 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "stylelint": "^14.0.0",
+    "stylelint-config-recommended": "^6.0.0",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
@@ -35,13 +37,19 @@
     "lint": "eslint --ext js,jsx,ts,tsx src",
     "lint:fix": "eslint --fix --ext js,jsx,ts,tsx src",
     "lint:check": "eslint --max-warnings 0 --ext js,jsx,ts,tsx src",
+    "stylelint": "stylelint src/**/*.css",
     "prettier": "prettier --write src",
     "prettier:check": "prettier --check src",
     "postinstall": "husky install"
   },
   "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "yarn lint:check"
+    ],
+    "src/**/*.css": [
+      "stylelint"
+    ],
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "yarn lint:check",
       "yarn prettier"
     ]
   },
