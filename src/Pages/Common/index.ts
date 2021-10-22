@@ -1,3 +1,3 @@
-export { default as Home } from "./Home";
-export { default as PageForbidden } from "./PageForbidden";
-export { default as PageNotFound } from "./PageNotFound";
+export { default as Home } from "./HomePage";
+export { default as ForbiddenPage } from "./ForbiddenPage";
+export { default as NotFoundPage } from "./NotFoundPage";

@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { Route, Switch } from "react-router-dom";
-import { Home, PageNotFound } from "./Common";
+import { Home, NotFoundPage } from "./Common";
 
 export default function MainSwitch(): ReactElement {
   return (
@@ -9,7 +9,7 @@ export default function MainSwitch(): ReactElement {
         <Home />
       </Route>
       <Route path="*">
-        <PageNotFound />
+        <NotFoundPage />
       </Route>
     </Switch>
   );
